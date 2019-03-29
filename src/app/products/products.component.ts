@@ -42,7 +42,7 @@ export class ProductsComponent implements OnInit {
     console.log(this.ProductCategory);
   }
   fetchCategories() {
-    this.http.get('https://test-api.edfa3ly.io/category').toPromise()
+    this.http.get('test-api.edfa3ly.io/category').toPromise()
       .then(res => {
         this.categories = res;
       })
@@ -51,7 +51,7 @@ export class ProductsComponent implements OnInit {
       })
   }
   fetchProducts() {
-    this.http.get('https://test-api.edfa3ly.io/product').toPromise()
+    this.http.get('test-api.edfa3ly.io/product').toPromise()
       .then(res => {
         this.products = res;
       })
