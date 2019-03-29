@@ -1,0 +1,69 @@
+.topTitle, .card-text, .card-title {
+    text-align: center !important;
+}
+
+.container-fluid {
+    background-color: #ebebeb
+}
+
+.products {
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 30em !important;
+}
+
+@media screen and (min-width:668px) and (max-width:800px) {
+    .products {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 18em !important;
+    }
+    .filterCard {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        margin-left: 3em;
+        width: 25em !important;
+    }
+}
+
+@media screen and (max-width:568px) {
+    .products {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 18em !important;
+    }
+    .filterCard {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        width: 13em;
+    }
+}
+
+.topCard {
+    width: 10em !important;
+}
+
+rating {
+    font-size: x-large;
+}
+
+.flex {
+    display: flex;
+}
+
+.topCard {
+    cursor: pointer;
+}
+
+.box {
+    background-color: #b6cbdd;
+    border: 1px solid #ebebeb;
+    border-radius:5px; 
+}
+
+.filterCard {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 16em;
+}

@@ -1,0 +1,69 @@
+<div class="container-fluid">
+  <h1 class="text-dark topTitle">Our e-commerce store
+  </h1>
+  <h6 class="text-dark topTitle">
+    Choose one of our categories from below
+  </h6>
+  <div class="row ">
+    <div *ngFor="let category of categories" class="mx-auto mr-2 ml-2">
+      <div class="topCard card  mt-2 mb-2 ">
+        <div class="card-body">
+          <a (click)="chooseCategory(category.id)">
+            <img class="card-img img-fluid" src="{{category.image}}" alt="categoryImage">
+            <h5 class="card-title">{{category.name}}</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row ">
+    <div class=" col-lg-4 col-md-12">
+
+      <div class=" box">
+        <h5 class="ml-3">Filters</h5>
+        <div class="mx-auto filterCard card">
+          <h3 class="card-title">Price range</h3>
+          <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+        </div>
+        <div class=" mx-auto filterCard card">
+          <h3 class="card-title">Color</h3>
+          <div class="mx-auto form-group-inline">
+            <input class="form-control mb-3" placeholder="Enter a color" type="text" [(ngModel)]="term">
+          </div>
+        </div>
+        <div class=" mx-auto filterCard card">
+          <h3 class="card-title">Average rating</h3>
+          <div class="mx-auto form-group-inline">
+            <rating [(ngModel)]="rate" [max]="max" [readonly]="false">
+            </rating>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-lg-8 col-md-12 ">
+      <div class="row">
+        <!-- |category:productcategory -->
+        <div *ngFor="let product of products | filter:term " class="mx-auto ">
+          <div class="products card">
+            <div class="card-body ">
+              <img class="card-img img-fluid" src="{{product.image}}" alt="productImage">
+              <h5 class="card-title">{{product.name}}</h5>
+              <p class="card-text ">
+                <rating [(ngModel)]=" product.rating" [max]="max" [readonly]="isReadonly">
+                </rating>
+              </p>
+
+              <p class="card-text ">{{product.price | currency}} </p>
+              <!--       <p class="card-text">{{product.releaseDate | date:'fullDate'}}</p> -->
+
+              <br>
+              <a [routerLink]="['/productinfo', product.id]" class="btn  btn-outline-success ">buy It</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
