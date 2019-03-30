@@ -1,16 +1,40 @@
 .topTitle, .card-text, .card-title {
     text-align: center !important;
+    margin: 0;
+}
+
+h5.card-title {
+    color: #0DB9F0;
+    margin-top: 10px !important;
 }
 
 .container-fluid {
-    background-color: #ebebeb
+    background-color: #f5f4f4
 }
 
 .products {
     margin: auto;
     margin-top: 1em;
     margin-bottom: 1em;
-    width: 30em !important;
+    width: 20em !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.rate {
+    color: #FFD700;
+}
+
+.top-catogries {
+    width: 58%;
+    margin-top: 35px !important;
+    margin: auto;
+}
+
+
+
+.btn-outline-success {
+    margin: auto;
+    display: block;
 }
 
 @media screen and (min-width:668px) and (max-width:800px) {
@@ -41,6 +65,7 @@
 }
 
 .topCard {
+    cursor: pointer;
     width: 10em !important;
 }
 
@@ -52,14 +77,31 @@ rating {
     display: flex;
 }
 
-.topCard {
-    cursor: pointer;
+@media screen and ( min-width:998px) {
+    .box {
+        position: fixed;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .box {
+        width: 20em;
+    }
+}
+
+hr {
+    width: 70%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin-bottom: 3em;
 }
 
 .box {
-    background-color: #b6cbdd;
+    background-color: #e4edee;
     border: 1px solid #ebebeb;
-    border-radius:5px; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .filterCard {

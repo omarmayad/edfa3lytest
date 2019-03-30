@@ -4,7 +4,7 @@
   <h6 class="text-dark topTitle">
     Choose one of our categories from below
   </h6>
-  <div class="row ">
+  <div class="row top-catogries">
     <div *ngFor="let category of categories" class="mx-auto mr-2 ml-2">
       <div class="topCard card  mt-2 mb-2 ">
         <div class="card-body">
@@ -15,9 +15,11 @@
         </div>
       </div>
     </div>
+    <hr>
   </div>
+
   <div class="row ">
-    <div class=" col-lg-4 col-md-12">
+    <div class=" col-lg-2 col-md-12">
 
       <div class=" box">
         <h5 class="ml-3">Filters</h5>
@@ -33,7 +35,7 @@
         </div>
         <div class=" mx-auto filterCard card">
           <h3 class="card-title">Average rating</h3>
-          <div class="mx-auto form-group-inline">
+          <div class="rate mx-auto form-group-inline">
             <rating [(ngModel)]="rate" [max]="max" [readonly]="false">
             </rating>
           </div>
@@ -41,7 +43,7 @@
       </div>
 
     </div>
-    <div class="col-lg-8 col-md-12 ">
+    <div class="mx-auto col-lg-8 col-md-12 ">
       <div class="row">
         <!-- |category:productcategory -->
         <div *ngFor="let product of products | filter:term " class="mx-auto ">
@@ -49,7 +51,7 @@
             <div class="card-body ">
               <img class="card-img img-fluid" src="{{product.image}}" alt="productImage">
               <h5 class="card-title">{{product.name}}</h5>
-              <p class="card-text ">
+              <p class="card-text rate">
                 <rating [(ngModel)]=" product.rating" [max]="max" [readonly]="isReadonly">
                 </rating>
               </p>
